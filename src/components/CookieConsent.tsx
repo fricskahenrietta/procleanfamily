@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { initGA } from "@/lib/analytics";
@@ -47,10 +48,10 @@ const CookieConsent = () => {
           Weboldalunkon cookie-kat (sütiket) használunk, hogy a legjobb felhasználói élményt nyújthassuk. Az adatok névtelenek, és kizárólag a weboldal forgalmának elemzésére szolgálnak a Google Analytics segítségével.
         </p>
         <div className="flex gap-4 flex-shrink-0">
-          <Button variant="default" onClick={() => handleConsent("accepted")}>
+          <Button variant="default" className="cursor-pointer" onClick={() => handleConsent("accepted")}>
             Elfogadom
           </Button>
-          <Button variant="outline" onClick={() => handleConsent("declined")}>
+          <Button variant="outline" className="cursor-pointer" onClick={() => handleConsent("declined")}>
             Elutasítom
           </Button>
         </div>

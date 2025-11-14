@@ -10,7 +10,7 @@ export default function FaqPage() {
       <main className="flex-grow py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">Gyakran Ismételt Kérdések</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-8">Gyakran Ismételt Kérdések</h1>
             <p className="text-xl text-muted-foreground mt-4">Válaszok a leggyakoribb kérdéseitekre.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">

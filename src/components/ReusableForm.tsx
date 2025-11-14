@@ -126,31 +126,31 @@ Legkorábbi kezdés: ${formData.startDate}
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="name">Név *</Label>
-          <Input id="name" required value={formData.name} onChange={(e) => handleInputChange("name", e.target.value)} />
+          <Input id="name" name="name" required value={formData.name} onChange={(e) => handleInputChange("name", e.target.value)} />
         </div>
         <div>
           <Label htmlFor="phone">Telefonszám *</Label>
-          <Input id="phone" type="tel" required value={formData.phone} onChange={(e) => handleInputChange("phone", e.target.value)} />
+          <Input id="phone" name="phone" type="tel" required value={formData.phone} onChange={(e) => handleInputChange("phone", e.target.value)} />
         </div>
       </div>
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="email">Email cím *</Label>
-          <Input id="email" type="email" required value={formData.email} onChange={(e) => handleInputChange("email", e.target.value)} />
+          <Input id="email" name="email" type="email" required value={formData.email} onChange={(e) => handleInputChange("email", e.target.value)} />
         </div>
         <div>
           <Label htmlFor="company">Cég neve *</Label>
-          <Input id="company" required value={formData.company} onChange={(e) => handleInputChange("company", e.target.value)} />
+          <Input id="company" name="company" required value={formData.company} onChange={(e) => handleInputChange("company", e.target.value)} />
         </div>
       </div>
       <div>
         <Label htmlFor="address">Iroda címe *</Label>
-        <Input id="address" required value={formData.address} onChange={(e) => handleInputChange("address", e.target.value)} />
+        <Input id="address" name="address" required value={formData.address} onChange={(e) => handleInputChange("address", e.target.value)} />
       </div>
       <div className="grid md:grid-cols-2 gap-6">
         <div>
           <Label htmlFor="size">Iroda nagysága (m²) *</Label>
-          <Input id="size" type="number" required value={formData.size} onChange={(e) => handleInputChange("size", e.target.value)} />
+          <Input id="size" name="size" type="number" required value={formData.size} onChange={(e) => handleInputChange("size", e.target.value)} />
         </div>
         <div>
           <Label htmlFor="frequency">Rendszeresség *</Label>
@@ -180,9 +180,9 @@ Legkorábbi kezdés: ${formData.startDate}
         </Select>
       </div>
 
-      <div className="flex sm:items-center sm:space-x-2">
+      <div className="flex items-center">
         <Checkbox id="privacy" onCheckedChange={(checked) => handleInputChange("privacyAccepted", checked as boolean)} checked={formData.privacyAccepted} />
-        <Label htmlFor="privacy" className="text-sm font-normal text-muted-foreground">
+        <Label htmlFor="privacy" className="text-sm font-normal text-muted-foreground ml-2">
           Elfogadom az <a href="/adatvedelem" target="_blank" className="underline hover:text-primary">Adatvédelmi Tájékoztatót</a>.
         </Label>
       </div>
@@ -197,7 +197,7 @@ Legkorábbi kezdés: ${formData.startDate}
         </div>
       )}
 
-      <Button type="submit" variant="hero" size="lg" className="w-full" disabled={!formData.privacyAccepted || (isCaptchaEnabled && !captchaToken) || isSubmitting}>
+      <Button type="submit" variant="hero" size="lg" className="w-full cursor-pointer" disabled={!formData.privacyAccepted || (isCaptchaEnabled && !captchaToken) || isSubmitting}>
         {isSubmitting ? 'Küldés...' : 'Ajánlat Kérése'}
       </Button>
     </form>

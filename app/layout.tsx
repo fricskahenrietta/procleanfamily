@@ -5,18 +5,18 @@ import { Toaster } from "@/components/ui/toaster";
 import CookieConsent from "@/components/CookieConsent";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+	variable: "--font-geist-sans",
+	subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "procleanfamily - Professzionális Takarítási Szolgáltatások",
-  description: "Professzionális takarítási szolgáltatások, amelyek megfelelnek az Ön igényeinek.",
+	title: "ProCleanFamily - Professzionális Takarítási Szolgáltatások",
+	description: "Professzionális takarítási szolgáltatások, amelyek megfelelnek az Ön igényeinek.",
 	keywords: [
 		"takarítás",
 		"professzionális takarítás",
@@ -29,19 +29,32 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        <Toaster />
-		<CookieConsent />
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<head>
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R07G0VN5V"></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', 'G-4R07G0VN5V');
+						`,
+					}}
+				/>
+			</head>
+			<body
+				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+			>
+				{children}
+				<Toaster />
+				<CookieConsent />
+			</body>
+		</html>
+	);
 }
