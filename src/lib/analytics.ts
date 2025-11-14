@@ -1,13 +1,37 @@
-// This is a placeholder for your analytics logic.
+// Google Analytics utility functions
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
 
 export const initGA = () => {
-  // In a real app, you would initialize Google Analytics here, e.g., using react-ga4.
-  // For now, we'll just log to the console.
-  console.log("Google Analytics Initialized");
-  // You could also append the GA script tag to the document head.
+  if (typeof window === 'undefined') return;
+  
+  // Update consent to granted
+  window.gtag('consent', 'update', {
+    'analytics_storage': 'granted',
+    'ad_storage': 'denied' // Keep ad storage denied if you don't use ads
+  });
+
+  // Initialize GA
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-4R07G0VN5V', {
+    page_path: window.location.pathname,
+  });
+
+  console.log("Google Analytics Initialized with consent");
 };
 
-export const logPageView = () => {
-  // In a real app, you would log page views here.
-  console.log(`Page view: ${window.location.pathname}`);
+export const logPageView = (url?: string) => {
+  if (typeof window === 'undefined' || !window.gtag) return;
+  
+  const pageUrl = url || window.location.pathname;
+  window.gtag('event', 'page_view', {
+    page_path: pageUrl,
+  });
+  
+  console.log(`Page view: ${pageUrl}`);
 };

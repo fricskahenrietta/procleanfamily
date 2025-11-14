@@ -10,8 +10,12 @@ const CookieConsent = () => {
   useEffect(() => {
     // Check if consent has already been given
     const consent = localStorage.getItem("cookie_consent");
+    
     if (!consent) {
       setIsVisible(true);
+    } else if (consent === "accepted") {
+      // If user previously accepted, initialize GA
+      initGA();
     }
   }, []);
 
