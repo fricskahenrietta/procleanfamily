@@ -20,7 +20,7 @@ export default function Adatvedelem() {
               <ul className="list-disc list-inside space-y-2">
                 <li><strong>Cégnév:</strong> ProCleanFamily</li>
                 <li><strong>Székhely:</strong> 1234 Budapest, Minta utca 1.</li>
-                <li><strong>E-mail cím:</strong> info@procleanfamily.hu</li>
+                <li><strong>E-mail cím:</strong> info@procleanfamily.com</li>
                 <li><strong>Adatvédelemért felelős személy:</strong> [Név/Beosztás, ha van kijelölt]</li>
               </ul>
             </section>
@@ -74,7 +74,7 @@ export default function Adatvedelem() {
                 <li><strong>A hozzájárulás visszavonásának joga:</strong> Bármikor visszavonhatja a hozzájárulását, ami azonban nem érinti a visszavonás előtti adatkezelés jogszerűségét.</li>
               </ul>
               <p className="mt-4">
-                Fenti jogait az <a href="mailto:info@procleanfamily.hu" className="text-primary underline">info@procleanfamily.hu</a> e-mail címen gyakorolhatja.
+                Fenti jogait az <a href="mailto:info@procleanfamily.com" className="text-primary underline">info@procleanfamily.com</a> e-mail címen gyakorolhatja.
               </p>
             </section>
 

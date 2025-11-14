@@ -43,7 +43,7 @@ const Hero = () => {
           <Button 
             variant="hero" 
             size="lg" 
-            className="text-lg"
+            className="text-lg cursor-pointer"
             onClick={scrollToContact}
           >
             Kérjen Ajánlatot Most

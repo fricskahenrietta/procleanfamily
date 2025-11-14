@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import Link from "next/link";
 
 interface ReusableFormProps {
   onFormChange?: (formData: any) => void;
@@ -183,7 +184,7 @@ Legkorábbi kezdés: ${formData.startDate}
       <div className="flex items-center">
         <Checkbox id="privacy" onCheckedChange={(checked) => handleInputChange("privacyAccepted", checked as boolean)} checked={formData.privacyAccepted} />
         <Label htmlFor="privacy" className="text-sm font-normal text-muted-foreground ml-2">
-          Elfogadom az <a href="/adatvedelem" target="_blank" className="underline hover:text-primary">Adatvédelmi Tájékoztatót</a>.
+          Elfogadom az <Link href="/adatvedelem" target="_blank" className="underline hover:text-primary">Adatvédelmi Tájékoztatót</Link>.
         </Label>
       </div>
 

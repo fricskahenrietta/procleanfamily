@@ -2,6 +2,7 @@
 import eventBus from "@/lib/event-bus";
 import { Droplet, Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
 	const handleResetCookie = () => {
@@ -59,9 +60,9 @@ const Footer = () => {
 					<div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/70">
 						<p>© 2025 ProCleanFamily. Minden jog fenntartva.</p>
 						<div className="flex flex-col sm:flex-row gap-4 text-center sm:gap-6">
-							<a href="/adatvedelem" className="hover:text-background transition-smooth">
+							<Link href="/adatvedelem" className="hover:text-background transition-smooth">
 								Adatvédelmi Tájékoztató
-							</a>
+							</Link>
 							<button onClick={handleResetCookie} className="hover:text-background transition-smooth cursor-pointer">
 								Cookie Beállítások
 							</button>
