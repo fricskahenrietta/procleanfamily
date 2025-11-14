@@ -183,7 +183,7 @@ Legkorábbi kezdés: ${formData.startDate}
 
       <div className="flex items-center">
         <Checkbox id="privacy" onCheckedChange={(checked) => handleInputChange("privacyAccepted", checked as boolean)} checked={formData.privacyAccepted} />
-        <Label htmlFor="privacy" className="text-sm font-normal text-muted-foreground ml-2">
+        <Label htmlFor="privacy" className="text-sm font-normal text-muted-foreground ml-2 cursor-pointer">
           Elfogadom az <Link href="/adatvedelem" target="_blank" className="underline hover:text-primary">Adatvédelmi Tájékoztatót</Link>.
         </Label>
       </div>

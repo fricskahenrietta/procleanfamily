@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { initGA } from "@/lib/analytics";
+import { initGA, denyGA } from "@/lib/analytics";
 import eventBus from "@/lib/event-bus";
 
 const CookieConsent = () => {
@@ -38,6 +38,8 @@ const CookieConsent = () => {
 
     if (consent === "accepted") {
       initGA();
+    } else {
+      denyGA();
     }
   };
 

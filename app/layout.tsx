@@ -25,7 +25,11 @@ export const metadata: Metadata = {
 		"ablaktisztítás",
 		"szőnyegtisztítás",
 		"budapest"
-	]
+	],
+	metadataBase: new URL('https://www.procleanfamily.com'),
+	other: {
+		'Content-Security-Policy': 'upgrade-insecure-requests'
+	}
 }
 
 export default function RootLayout({

@@ -17,9 +17,9 @@ const Footer = () => {
 				<div className="grid md:grid-cols-3 gap-8 mb-8">
 					{/* Logo */}
 					<div className="flex items-center justify-center md:justify-start gap-2">
-						<a href="/">
+						<Link href="/">
 							<img src="/images/logo.svg" alt="Logo" className="h-16 brightness-0 invert"></img>
-						</a>
+						</Link>
 					</div>
 
 					{/* Slogan */}
@@ -31,27 +31,27 @@ const Footer = () => {
 
 					{/* Social Links */}
 					<div className="flex items-center justify-center md:justify-end gap-4">
-						<a
+						<Link
 							href="#"
 							className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-smooth"
 							aria-label="Facebook"
 						>
 							<Facebook className="w-5 h-5" />
-						</a>
-						<a
+						</Link>
+						<Link
 							href="#"
 							className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-smooth"
 							aria-label="Instagram"
 						>
 							<Instagram className="w-5 h-5" />
-						</a>
-						<a
+						</Link>
+						<Link
 							href="#"
 							className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-smooth"
 							aria-label="LinkedIn"
 						>
 							<Linkedin className="w-5 h-5" />
-						</a>
+						</Link>
 					</div>
 				</div>
 
