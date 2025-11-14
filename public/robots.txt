@@ -1,0 +1,10 @@
+# robots.txt for procleanfamily.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin or sensitive areas (if any)
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.procleanfamily.com/sitemap.xml

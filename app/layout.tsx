@@ -27,6 +27,28 @@ export const metadata: Metadata = {
 		"budapest"
 	],
 	metadataBase: new URL('https://www.procleanfamily.com'),
+	openGraph: {
+		type: 'website',
+		locale: 'hu_HU',
+		url: 'https://www.procleanfamily.com',
+		siteName: 'ProCleanFamily',
+		title: 'ProCleanFamily - Professzionális Takarítási Szolgáltatások',
+		description: 'Professzionális takarítási szolgáltatások, amelyek megfelelnek az Ön igényeinek.',
+		images: [
+			{
+				url: '/images/hero-cleaners.jpg',
+				width: 1200,
+				height: 630,
+				alt: 'ProCleanFamily - Professzionális Takarítás',
+			}
+		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'ProCleanFamily - Professzionális Takarítási Szolgáltatások',
+		description: 'Professzionális takarítási szolgáltatások, amelyek megfelelnek az Ön igényeinek.',
+		images: ['/images/hero-cleaners.jpg'],
+	},
 	other: {
 		'Content-Security-Policy': 'upgrade-insecure-requests'
 	}
