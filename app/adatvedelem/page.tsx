@@ -12,15 +12,15 @@ export default function Adatvedelem() {
             <p className="text-muted-foreground">Hatálybalépés napja: 2025. október 27.</p>
 
             <p>
-              A <strong>CleanPro Kft.</strong> (a továbbiakban: "Adatkezelő", "mi") elkötelezett a weboldalunk látogatói és szolgáltatásaink igénybe vevői (a továbbiakban: "Felhasználó", "Ön") személyes adatainak védelme iránt. Ez a tájékoztató bemutatja, hogy milyen személyes adatokat gyűjtünk, hogyan használjuk fel és védjük azokat, valamint milyen jogai vannak Önnek az adatkezeléssel kapcsolatban, összhangban az Európai Unió Általános Adatvédelmi Rendeletével (GDPR).
+              A <strong>procleanfamily Kft.</strong> (a továbbiakban: "Adatkezelő", "mi") elkötelezett a weboldalunk látogatói és szolgáltatásaink igénybe vevői (a továbbiakban: "Felhasználó", "Ön") személyes adatainak védelme iránt. Ez a tájékoztató bemutatja, hogy milyen személyes adatokat gyűjtünk, hogyan használjuk fel és védjük azokat, valamint milyen jogai vannak Önnek az adatkezeléssel kapcsolatban, összhangban az Európai Unió Általános Adatvédelmi Rendeletével (GDPR).
             </p>
 
             <section>
               <h2 className="text-3xl font-bold mt-8 mb-4">1. Az Adatkezelő adatai</h2>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Cégnév:</strong> CleanPro Kft.</li>
+                <li><strong>Cégnév:</strong> procleanfamily Kft.</li>
                 <li><strong>Székhely:</strong> 1234 Budapest, Minta utca 1.</li>
-                <li><strong>E-mail cím:</strong> info@cleanpro.hu</li>
+                <li><strong>E-mail cím:</strong> info@procleanfamily.hu</li>
                 <li><strong>Adatvédelemért felelős személy:</strong> [Név/Beosztás, ha van kijelölt]</li>
               </ul>
             </section>
@@ -74,7 +74,7 @@ export default function Adatvedelem() {
                 <li><strong>A hozzájárulás visszavonásának joga:</strong> Bármikor visszavonhatja a hozzájárulását, ami azonban nem érinti a visszavonás előtti adatkezelés jogszerűségét.</li>
               </ul>
               <p className="mt-4">
-                Fenti jogait az <a href="mailto:info@cleanpro.hu" className="text-primary underline">info@cleanpro.hu</a> e-mail címen gyakorolhatja.
+                Fenti jogait az <a href="mailto:info@procleanfamily.hu" className="text-primary underline">info@procleanfamily.hu</a> e-mail címen gyakorolhatja.
               </p>
             </section>
 

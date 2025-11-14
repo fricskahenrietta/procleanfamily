@@ -42,7 +42,7 @@ const Navigation = () => {
   ];
 
   const renderMenuItem = (item: typeof menuItems[0], isMobile = false) => {
-    const className = `text-foreground hover:text-primary transition-smooth font-medium ${isMobile ? 'text-left w-full block' : ''}`;
+    const className = `text-foreground hover:text-primary transition-smooth cursor-pointer font-medium ${isMobile ? 'text-left w-full block' : ''}`;
 
     if (item.id === "faq") {
       return (
@@ -90,11 +90,11 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
              {onMainPage ? (
-                <Button variant="default" size="lg" onClick={() => scrollToSection("contact")}>
+                <Button variant="default" size="lg" className="cursor-pointer" onClick={() => scrollToSection("contact")}>
                     Ajánlatkérés
                 </Button>
              ) : (
-                <Button variant="default" size="lg" asChild>
+                <Button variant="default" size="lg" className="cursor-pointer" asChild>
                     <Link href="/#contact">Ajánlatkérés</Link>
                 </Button>
              )}

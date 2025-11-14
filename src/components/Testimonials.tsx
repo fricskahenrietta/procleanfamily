@@ -6,14 +6,14 @@ const Testimonials = () => {
     {
       company: "TechHub Kft.",
       testimonial:
-        "A CleanPro csapata rendkívül professzionális és megbízható. Irodánk minden nap tiszta és rendezett, ami nagyban hozzájárul a produktív munkakörnyezethez. Csak ajánlani tudom őket!",
+        "A procleanfamily csapata rendkívül professzionális és megbízható. Irodánk minden nap tiszta és rendezett, ami nagyban hozzájárul a produktív munkakörnyezethez. Csak ajánlani tudom őket!",
       name: "Nagy Péter",
       position: "Ügyvezető Igazgató",
     },
     {
       company: "Innovent Zrt.",
       testimonial:
-        "Már több mint 3 éve dolgozunk együtt a CleanPro-val, és maximálisan elégedettek vagyunk. Rugalmasak, precízek és mindig szem előtt tartják az ügyfél igényeit. Kiváló ár-érték arány!",
+        "Már több mint 3 éve dolgozunk együtt a procleanfamily-val, és maximálisan elégedettek vagyunk. Rugalmasak, precízek és mindig szem előtt tartják az ügyfél igényeit. Kiváló ár-érték arány!",
       name: "Kovács Anna",
       position: "Facility Manager",
     },

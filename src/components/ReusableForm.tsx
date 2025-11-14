@@ -180,7 +180,7 @@ Legkorábbi kezdés: ${formData.startDate}
         </Select>
       </div>
 
-      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:space-x-2">
+      <div className="flex sm:items-center sm:space-x-2">
         <Checkbox id="privacy" onCheckedChange={(checked) => handleInputChange("privacyAccepted", checked as boolean)} checked={formData.privacyAccepted} />
         <Label htmlFor="privacy" className="text-sm font-normal text-muted-foreground">
           Elfogadom az <a href="/adatvedelem" target="_blank" className="underline hover:text-primary">Adatvédelmi Tájékoztatót</a>.
