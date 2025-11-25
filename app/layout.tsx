@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 		description: 'Professzionális takarítási szolgáltatások, amelyek megfelelnek az Ön igényeinek.',
 		images: [
 			{
-				url: '/images/hero-cleaners.jpg',
+				url: '/images/parallax-office.jpg',
 				width: 1200,
 				height: 630,
 				alt: 'ProCleanFamily - Professzionális Takarítás',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'ProCleanFamily - Professzionális Takarítási Szolgáltatások',
 		description: 'Professzionális takarítási szolgáltatások, amelyek megfelelnek az Ön igényeinek.',
-		images: ['/images/hero-cleaners.jpg'],
+		images: ['/images/parallax-office.jpg'],
 	},
 	other: {
 		'Content-Security-Policy': 'upgrade-insecure-requests'
@@ -62,22 +62,20 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
+				{/* Google Tag Manager */}
 				<script
 					dangerouslySetInnerHTML={{
-						__html: `
-							window.dataLayer = window.dataLayer || [];
-							function gtag(){dataLayer.push(arguments);}
-							
-							// Default denied - GDPR compliance
-							gtag('consent', 'default', {
-								'analytics_storage': 'denied',
-								'ad_storage': 'denied',
-								'wait_for_update': 500
-							});
-						`,
+						__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WVKTLQQK');`,
 					}}
 				/>
-				<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R07G0VN5V"></script>
+
+				{/* Preload critical images */}
+				<link rel="preload" as="image" href="/images/hero-cleaners.jpg" fetchPriority="high" />
+				<link rel="preload" as="image" href="/images/logo.svg" fetchPriority="high" />
 
 				<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
 				<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -88,6 +86,15 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
+				{/* Google Tag Manager (noscript) */}
+				<noscript>
+					<iframe 
+						src="https://www.googletagmanager.com/ns.html?id=GTM-WVKTLQQK"
+						height="0" 
+						width="0" 
+						style={{ display: 'none', visibility: 'hidden' }}
+					/>
+				</noscript>
 				{children}
 				<Toaster />
 				<CookieConsent />

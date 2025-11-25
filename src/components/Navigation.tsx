@@ -84,7 +84,7 @@ const Navigation = () => {
             }
             setIsMobileMenuOpen(false); 
           }}>
-            <img src="/images/logo.svg" alt="Logo" className=" h-14"></img>
+            <img src="/images/logo.svg" alt="Logo" className=" h-14" fetchPriority="high"></img>
           </Link>
 
           {/* Desktop Menu */}

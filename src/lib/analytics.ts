@@ -1,8 +1,7 @@
-// Google Analytics utility functions
+// Google Tag Manager utility functions
 
 declare global {
 	interface Window {
-		gtag: (...args: any[]) => void;
 		dataLayer: any[];
 	}
 }
@@ -10,38 +9,38 @@ declare global {
 export const initGA = () => {
 	if (typeof window === 'undefined') return;
 
-	// Update consent to granted
-	window.gtag('consent', 'update', {
-		'analytics_storage': 'granted',
-		'ad_storage': 'denied' // Keep ad storage denied if you don't use ads
+	// Push consent granted event to GTM
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'consent_update',
+		analytics_storage: 'granted',
+		ad_storage: 'denied'
 	});
 
-	// Initialize GA
-	window.gtag('js', new Date());
-	window.gtag('config', 'G-4R07G0VN5V', {
-		page_path: window.location.pathname,
-	});
-
-	console.log("Google Analytics Initialized with consent");
+	console.log("Google Tag Manager: Consent granted");
 };
 
 export const denyGA = () => {
 	if (typeof window === 'undefined') return;
 
-	// Explicitly deny consent
-	window.gtag('consent', 'update', {
-		'analytics_storage': 'denied',
-		'ad_storage': 'denied'
+	// Push consent denied event to GTM
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'consent_update',
+		analytics_storage: 'denied',
+		ad_storage: 'denied'
 	});
 
-	console.log("Google Analytics denied by user");
+	console.log("Google Tag Manager: Consent denied");
 };
 
 export const logPageView = (url?: string) => {
-	if (typeof window === 'undefined' || !window.gtag) return;
+	if (typeof window === 'undefined') return;
 
 	const pageUrl = url || window.location.pathname;
-	window.gtag('event', 'page_view', {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'page_view',
 		page_path: pageUrl,
 	});
 
