@@ -30,7 +30,7 @@ const Footer = () => {
 					</div>
 
 					{/* Social Links */}
-					<div className="flex items-center justify-center md:justify-end gap-4">
+					{/* <div className="flex items-center justify-center md:justify-end gap-4">
 						<Link
 							href="#"
 							className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-smooth"
@@ -52,7 +52,7 @@ const Footer = () => {
 						>
 							<Linkedin className="w-5 h-5" />
 						</Link>
-					</div>
+					</div> */}
 				</div>
 
 				{/* Bottom Footer */}

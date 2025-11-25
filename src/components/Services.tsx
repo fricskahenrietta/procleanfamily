@@ -6,8 +6,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const Services = () => {
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
   const isMobile = useIsMobile();
-  const [isInView, setIsInView] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const services = [
     {
@@ -33,47 +32,47 @@ const Services = () => {
   ];
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
+    if (!isMobile) return;
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    const observers = cardRefs.current.map((card, index) => {
+      if (!card) return null;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setFlippedCard(index);
+          }
+        },
+        { threshold: 0.6 }
+      );
+
+      observer.observe(card);
+      return observer;
+    });
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      observers.forEach((observer, index) => {
+        if (observer && cardRefs.current[index]) {
+          observer.unobserve(cardRefs.current[index]!);
+        }
+      });
     };
-  }, []);
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isMobile && isInView) {
-      interval = setInterval(() => {
-        setFlippedCard(prev => (prev === null || prev >= services.length - 1 ? 0 : prev + 1));
-      }, 2500);
-    }
-    return () => clearInterval(interval);
-  }, [isMobile, isInView, services.length]);
+  }, [isMobile]);
 
   const handleInteraction = (index: number) => {
-    if (isMobile) {
-      setFlippedCard(flippedCard === index ? null : index);
-    } else {
+    if (!isMobile) {
       // Desktop hover logic is handled by onMouseEnter/onMouseLeave
+      return;
     }
+    // On mobile, allow manual toggle
+    setFlippedCard(flippedCard === index ? null : index);
   };
 
 
   return (
-    <section ref={sectionRef} id="services" className="py-12 md:py-20">
+    <section id="services" className="py-12 md:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground my-4">
           Szolgáltatásaink
         </h2>
         <p className="text-xl text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto">
@@ -84,14 +83,17 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative h-96 md:h-80 rounded-xl overflow-hidden cursor-pointer group"
+              ref={(el) => {
+                cardRefs.current[index] = el;
+              }}
+              className="relative h-96 md:h-80 rounded-xl overflow-hidden group"
               onMouseEnter={() => !isMobile && setFlippedCard(index)}
               onMouseLeave={() => !isMobile && setFlippedCard(null)}
               onClick={() => handleInteraction(index)}
             >
               {/* Front Side */}
               <div
-                className={`absolute inset-0 transition-all duration-500 ${
+                className={`absolute inset-0 transition-all duration-500 rounded-xl ${
                   flippedCard === index ? "opacity-0 scale-95" : "opacity-100 scale-100"
                 }`}
                 style={{
@@ -108,7 +110,7 @@ const Services = () => {
 
               {/* Back Side */}
               <div
-                className={`absolute inset-0 gradient-primary flex items-center justify-center p-6 text-center transition-all duration-500 ${
+                className={`absolute inset-0 gradient-primary flex items-center rounded-xl justify-center p-6 text-center transition-all duration-500 ${
                   flippedCard === index ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
               >

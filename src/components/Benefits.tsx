@@ -22,7 +22,7 @@ const Benefits = () => {
   return (
     <section id="about" className="py-12 md:py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-12 md:mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-12 md:mb-16 mt-4">
           Miért Válasszon Minket?
         </h2>
         

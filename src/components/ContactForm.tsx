@@ -15,7 +15,7 @@ const ContactForm = () => {
             Lépj Velünk Kapcsolatba
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Töltse ki az alábbi űrlapot és 24 órán belül felvesszük Önnel a kapcsolatot.
+            Töltse ki az alábbi űrlapot és 48 órán belül felvesszük Önnel a kapcsolatot.
           </p>
         </div>
         <div className="max-w-2xl mx-auto">
