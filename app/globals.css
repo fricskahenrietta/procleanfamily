@@ -166,6 +166,20 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Offset for fixed navigation */
+}
+
+/* Enhanced smooth scrolling for better UX */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .container {
