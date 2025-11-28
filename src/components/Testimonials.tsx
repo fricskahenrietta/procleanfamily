@@ -9,7 +9,7 @@ const Testimonials = () => {
       logo: "/images/pentolt.jpg",
     },
     {
-      name: "Wanzl Kft.",
+      name: "Wanzl Magyarország Kft.",
       logo: "/images/wanzl.png",
     },
   ];
