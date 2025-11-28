@@ -24,13 +24,13 @@ const Testimonials = () => {
           Büszkék vagyunk rá, hogy ilyen neves cégek választottak minket
         </p>
 
-        <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 max-w-4xl mx-auto items-center">
           {partners.map((partner, index) => (
             <div
               key={index}
               className="flex flex-col items-center justify-center gap-4"
             >
-              <div className="relative h-20 w-48">
+              <div className="relative h-[45px] w-48">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} logo`}
