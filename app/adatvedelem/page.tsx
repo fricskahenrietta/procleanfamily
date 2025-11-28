@@ -18,10 +18,11 @@ export default function Adatvedelem() {
             <section>
               <h2 className="text-3xl font-bold mt-8 mb-4">1. Az Adatkezelő adatai</h2>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Tulajdonos:</strong> Blaskó Edina</li>
-                <li><strong>Székhely:</strong> 1023 Budapest, Frankel Leó út 14.</li>
+                <li><strong>Cégnév:</strong> Blaskó Edina EV</li>
+                <li><strong>Nyilvántartási szám:</strong> 56010662</li>
+                <li><strong>Székhely:</strong> 1023 Budapest, Frankel Leó út 14. fszt. 3.</li>
+                <li><strong>Adószám:</strong> 57388485-1-41</li>
                 <li><strong>E-mail cím:</strong> info@procleanfamily.com</li>
-                <li><strong>Adatvédelemért felelős személy:</strong> Blaskó Edina/Cégtulajdonos</li>
               </ul>
             </section>
 
@@ -31,8 +32,10 @@ export default function Adatvedelem() {
               <h3 className="text-2xl font-semibold mt-6 mb-2">2.1. Kapcsolatfelvétel és ajánlatkérés</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li><strong>Kezelt adatok:</strong> Név, e-mail cím, telefonszám, cégnév, iroda címe, iroda mérete, takarítás gyakorisága, preferált kezdési időpont.</li>
+                <li><strong>Adatok forrása:</strong> A személyes adatokat közvetlenül Öntől, az űrlap kitöltése során gyűjtjük.</li>
                 <li><strong>Az adatkezelés célja:</strong> Az Önnel való kapcsolatfelvétel, az Ön által kért árajánlat elkészítése és megküldése, valamint a szerződéskötést megelőző egyeztetések lefolytatása.</li>
-                <li><strong>Az adatkezelés jogalapja:</strong> Az Ön hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont), amelyet az űrlap kitöltésével és az adatvédelmi tájékoztató elfogadásával ad meg.</li>
+                <li><strong>Az adatkezelés jogalapja:</strong> Szerződés előkészítése (GDPR 6. cikk (1) bekezdés b) pont). Amennyiben az ajánlatkérés marketing célú megkereséseket is magában foglal, úgy a marketing célú adatkezelés jogalapja az Ön hozzájárulása (GDPR 6. cikk (1) bekezdés a) pont).</li>
+                <li><strong>Fontos:</strong> Az Adatkezelő nem használja fel az adatokat marketing célokra, hírlevelet nem küld. Az adatokat kizárólag az árajánlat elkészítése és a szerződés előkészítése céljából kezeli.</li>
               </ul>
 
               <h3 className="text-2xl font-semibold mt-6 mb-2">2.2. Sütik (Cookie-k) kezelése</h3>
@@ -54,7 +57,14 @@ export default function Adatvedelem() {
             <section>
               <h2 className="text-3xl font-bold mt-8 mb-4">4. Adatfeldolgozók és adattovábbítás</h2>
               <p>
-                Az Adatkezelő a tevékenysége során adatfeldolgozókat vehet igénybe (pl. tárhelyszolgáltató, könyvelő, hírlevélküldő szoftver üzemeltetője). Az adatfeldolgozók a személyes adatokat kizárólag az Adatkezelő utasításai alapján, a GDPR előírásainak megfelelően kezelhetik.
+                Az Adatkezelő a tevékenysége során a következő adatfeldolgozókat veszi igénybe:
+              </p>
+              <ul className="list-disc list-inside space-y-2 mt-2">
+                <li><strong>Tárhelyszolgáltató:</strong> Forpsi</li>
+                <li><strong>Űrlapkezelő szolgáltatás:</strong> Web3Forms</li>
+              </ul>
+              <p className="mt-4">
+                Az Ön személyes adataihoz kizárólag a következő jogosult személyek férhetnek hozzá: Blaskó Edina és az általa megbízott, adatkezelésben közreműködő személyek. Az adatfeldolgozók a személyes adatokat kizárólag az Adatkezelő utasításai alapján, a GDPR előírásainak megfelelően kezelhetik.
               </p>
               <p className="mt-2">
                 Személyes adatait harmadik országba (az EU-n/EGT-n kívülre) csak abban az esetben továbbítjuk, ha ahhoz megfelelő védelmi szint biztosított (pl. megfelelőségi határozat vagy általános adatvédelmi kikötések útján).
@@ -62,7 +72,19 @@ export default function Adatvedelem() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold mt-8 mb-4">5. Az Ön jogai az adatkezeléssel kapcsolatban</h2>
+              <h2 className="text-3xl font-bold mt-8 mb-4">5. Adatbiztonság</h2>
+              <p>
+                Az Adatkezelő kiemelten fontosnak tartja az Ön személyes adatainak biztonságát, ezért megfelelő technikai és szervezési intézkedéseket alkalmaz az adatok védelme érdekében:
+              </p>
+              <ul className="list-disc list-inside space-y-2 mt-2">
+                <li>A weboldal titkosított HTTPS kapcsolatot használ az adatok átvitele során.</li>
+                <li>Az adatokhoz kizárólag jogosult személyek férhetnek hozzá.</li>
+                <li>Az adatokat megfelelő technikai védelem mellett tároljuk, amely véd az illetéktelen hozzáféréstől, módosítástól és törléstől.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold mt-8 mb-4">6. Az Ön jogai az adatkezeléssel kapcsolatban</h2>
               <p>Önt az alábbi jogok illetik meg a személyes adatai kezelésével kapcsolatban:</p>
               <ul className="list-disc list-inside space-y-2 mt-4">
                 <li><strong>A hozzáférés joga:</strong> Tájékoztatást kérhet arról, hogy milyen személyes adatait kezeljük.</li>
@@ -79,7 +101,7 @@ export default function Adatvedelem() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold mt-8 mb-4">6. Jogorvoslati lehetőségek</h2>
+              <h2 className="text-3xl font-bold mt-8 mb-4">7. Jogorvoslati lehetőségek</h2>
               <p>
                 Amennyiben úgy véli, hogy az adatkezelésünk nem felel meg a jogszabályi előírásoknak, panaszt tehet a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH).
               </p>
@@ -92,7 +114,7 @@ export default function Adatvedelem() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold mt-8 mb-4">7. A tájékoztató módosítása</h2>
+              <h2 className="text-3xl font-bold mt-8 mb-4">8. A tájékoztató módosítása</h2>
               <p>
                 Az Adatkezelő fenntartja a jogot, hogy ezt az adatvédelmi tájékoztatót egyoldalúan módosítsa. A módosítások a weboldalon való közzététellel lépnek hatályba.
               </p>
