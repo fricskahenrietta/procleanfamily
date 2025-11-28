@@ -9,7 +9,7 @@ export default function Adatvedelem() {
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold mb-8 text-center">Adatvédelmi és Adatkezelési Tájékoztató</h1>
           <div className="space-y-6 text-lg">
-            <p className="text-muted-foreground">Hatálybalépés napja: 2025. október 27.</p>
+            <p className="text-muted-foreground">Hatálybalépés napja: 2025. november 28.</p>
 
             <p>
               A <strong>ProCleanFamily</strong> (a továbbiakban: "Adatkezelő", "mi") elkötelezett a weboldalunk látogatói és szolgáltatásaink igénybe vevői (a továbbiakban: "Felhasználó", "Ön") személyes adatainak védelme iránt. Ez a tájékoztató bemutatja, hogy milyen személyes adatokat gyűjtünk, hogyan használjuk fel és védjük azokat, valamint milyen jogai vannak Önnek az adatkezeléssel kapcsolatban, összhangban az Európai Unió Általános Adatvédelmi Rendeletével (GDPR).
@@ -18,10 +18,10 @@ export default function Adatvedelem() {
             <section>
               <h2 className="text-3xl font-bold mt-8 mb-4">1. Az Adatkezelő adatai</h2>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Cégnév:</strong> ProCleanFamily</li>
-                <li><strong>Székhely:</strong> 1234 Budapest, Minta utca 1.</li>
+                <li><strong>Tulajdonos:</strong> Blaskó Edina</li>
+                <li><strong>Székhely:</strong> 1023 Budapest, Frankel Leó út 14.</li>
                 <li><strong>E-mail cím:</strong> info@procleanfamily.com</li>
-                <li><strong>Adatvédelemért felelős személy:</strong> [Név/Beosztás, ha van kijelölt]</li>
+                <li><strong>Adatvédelemért felelős személy:</strong> [Blaskó Edina/Cégtulajdonos]</li>
               </ul>
             </section>
 
