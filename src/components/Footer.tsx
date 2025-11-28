@@ -14,7 +14,7 @@ const Footer = () => {
 		<footer className="bg-foreground text-background py-12">
 			<div className="container mx-auto px-4">
 				{/* Main Footer Content */}
-				<div className="grid md:grid-cols-3 gap-8 mb-8">
+				<div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8">
 					{/* Logo */}
 					<div className="flex items-center justify-center md:justify-start gap-2">
 						<Link href="/">
@@ -23,8 +23,8 @@ const Footer = () => {
 					</div>
 
 					{/* Slogan */}
-					<div className="flex items-center justify-center">
-						<p className="font-medium italic text-center md:text-left">
+					<div className="flex items-center">
+						<p className="font-medium italic text-center md:text-right">
 							Tisztaság, mely nem csak munka, hanem családi érték
 						</p>
 					</div>

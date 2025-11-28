@@ -18,11 +18,10 @@ export default function Adatvedelem() {
             <section>
               <h2 className="text-3xl font-bold mt-8 mb-4">1. Az Adatkezelő adatai</h2>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Cégnév:</strong> Blaskó Edina EV</li>
-                <li><strong>Nyilvántartási szám:</strong> 56010662</li>
-                <li><strong>Székhely:</strong> 1023 Budapest, Frankel Leó út 14. fszt. 3.</li>
-                <li><strong>Adószám:</strong> 57388485-1-41</li>
+                <li><strong>Tulajdonos:</strong> Blaskó Edina</li>
+                <li><strong>Székhely:</strong> 1023 Budapest, Frankel Leó út 14.</li>
                 <li><strong>E-mail cím:</strong> info@procleanfamily.com</li>
+                <li><strong>Adatvédelemért felelős személy:</strong> Blaskó Edina/Cégtulajdonos</li>
               </ul>
             </section>
 

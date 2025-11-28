@@ -1,12 +1,13 @@
 'use client';
 
 import Image from "next/image";
+import clsx from "clsx";
 
 const Testimonials = () => {
   const partners = [
     {
       name: "Pentolt Kft.",
-      logo: "/images/pentolt.jpg",
+      logo: "/images/pentolt.png",
     },
     {
       name: "Wanzl Magyarország Kft.",
@@ -28,9 +29,16 @@ const Testimonials = () => {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center gap-4"
+              className={clsx("flex flex-col items-center justify-center", {
+                  "gap-2": partner.logo.includes("pentolt"),
+                  "gap-4": !partner.logo.includes("pentolt"),
+                })}
             >
-              <div className="relative h-[45px] w-48">
+              <div
+                className={clsx("relative w-48 h-[89px]", {
+                  "p-2": partner.logo.includes("pentolt"),
+                })}
+              >
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} logo`}

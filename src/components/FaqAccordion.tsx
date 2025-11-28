@@ -18,8 +18,8 @@ const faqData = [
   },
   {
     id: "item-3",
-    question: "Hétvégén vagy munkaidőn kívül is vállalnak takarítást?",
-    answer: "Igen, rugalmasan alkalmazkodunk ügyfeleink igényeihez. Vállalunk takarítást kora reggeli, esti órákban és hétvégén is, hogy a lehető legkevésbé zavarjuk az irodai munkát.",
+    question: "Vidéken is vállalnak takarítást?",
+    answer: "Nem, jelenleg csak Budapest területén vállalunk irodatakarítást. Az időpontokat igyekszünk az Ön igényeihez igazítani, legyen szó rendszeres vagy alkalmi takarításról.",
   },
   {
     id: "item-4",
