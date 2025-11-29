@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 				<link rel="manifest" href="/favicon/site.webmanifest" />
 
-				<meta name="google-site-verification" content="gZ6Ed6h7J0DoI1tYsvXJD-o41fnJcWP34RipEcgNWno" />
+				{/* <meta name="google-site-verification" content="gZ6Ed6h7J0DoI1tYsvXJD-o41fnJcWP34RipEcgNWno" /> */}
 
 			</head>
 			<body
